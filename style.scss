@@ -1,6 +1,4 @@
-*{
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
 
 @mixin flex-center{
     display: flex;
@@ -9,11 +7,71 @@
 }
 
 @mixin zeroReset {
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
     margin: 0;
     padding: 0;
 }
 
+*{
+    box-sizing: border-box;
+    @include zeroReset;
+}
+
+
+
+
+body{
+    font-family: "Signika", sans-serif;
+}
+
+header{
+    font-family: "Chelsea Market", cursive;   
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+
+
+.bottom{
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+    bottom: 0;
+    left:0;
+    right:0;
+}
+
+.middle{
+    position: absolute;
+    width: 100%;
+    z-index: 13;
+    left:0;
+    top: -160px;
+}
+
+.mountains{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right:0;
+    z-index:12;
+  
+}
+
+.title{
+    position: absolute;
+    right: 50px;
+    top: 150px;
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+    z-index: 30;
+}
+
+.sky{
+    position: absolute;
+    width: 100%;
+    top: -200px;
+    z-index: 15;
+}
