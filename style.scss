@@ -35,7 +35,7 @@ header{
 
 .bottom{
     position: absolute;
-    width: 100%;
+    width: 1500px;
     z-index: 20;
     bottom: 0;
     left:0;
@@ -44,16 +44,16 @@ header{
 
 .middle{
     position: absolute;
-    width: 100%;
-    z-index: 13;
+    width: 1200px;
+    z-index: 11;
     left:0;
     top: -160px;
 }
 
 .mountains{
     position: absolute;
-    width: 100%;
-    top: 0;
+    width: 1200px;
+    top: 100px;
     right:0;
     z-index:12;
   
@@ -69,9 +69,29 @@ header{
     z-index: 30;
 }
 
+.junior{
+    position: absolute;
+    font-size: 1rem;
+    top: 210px;
+    right: 250px;
+    color: white;
+    z-index: 30;
+}
+
 .sky{
     position: absolute;
     width: 100%;
     top: -200px;
     z-index: 15;
+}
+
+.downButton{
+    position: absolute;
+    background: url("img/down.png");
+    background-size: cover;
+    top: 40%;
+    left: 90%;
+    width: 50px;
+    height: 50px;
+    z-index: 45;
 }
