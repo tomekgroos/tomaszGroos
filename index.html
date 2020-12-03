@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Tomasz Groos Personal</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap" rel="stylesheet">
-    <script defer src="./script.js"></script>
-</head>
-    <body>
-        <header>
-            <img class="bottom" src="img/bottom.png" alt="bottom">
-            <img class="middle" src="img/middle.png" alt="middle">
-            <p class="title">Tomasz Groos</p>
-            <p class="junior">junior developer</p>
-            <img class ="mountains" src="img/mountains.png" alt="mountains">
-            <img class="sky" src="img/sky.png" alt="sky">
-            <div class="downButton"></div>
-        </header>
-    </body>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./header.js"></script>
+  </head>
+  <body>
+    <header>
+      <img class="middle fade" data-velocity="-0.1"  src="img/middle.png" alt="middle" />
+      <p class="title fade" data-velocity="0.3" >Tomasz Groos</p>
+      <p class="junior fade" data-velocity="0.3" >junior developer</p>
+      <img class="mountains fade" data-velocity="0.6"  src="img/mountains.png" alt="mountains" />
+      <img class="sky fade" data-velocity="0.7"src="img/sky.png"   alt="sky" />
+      <img class="bottom fade" data-velocity="0.25" src="img/bottom.png" alt="bottom" />
+      <div class="downButton fade" data-velocity="0.2" ></div>
+    </header>
+    <div class="container">
+      <div class="about">
+        <p>O MNIE</p>
+        <div class="image-box">
+          <img src="img/IMG_20190118_140032.jpg" alt="Eilat-Desert" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
