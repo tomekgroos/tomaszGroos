@@ -13,8 +13,8 @@
     <script defer src="./main.js"></script>
     
   </head>
-  <body>
-    <header>
+  <body onload="resetScreen()">
+    <a id="top"><header></a>
       <img
         class="middle fade"
         data-velocity="-0.1"
@@ -22,7 +22,7 @@
         alt="middle"
       />
       <p class="title fade" data-velocity="0.3">Tomasz Groos</p>
-      <p class="junior fade" data-velocity="0.3">junior developer</p>
+      <p class="junior fade" data-velocity="0.3">junior frontend developer</p>
       <img
         class="mountains fade"
         data-velocity="0.6"
@@ -44,17 +44,25 @@
       <div class="fader"></div>
       <nav>
         <ul>
-          <li>START</li>
-          <li>O MNIE</li>
+          <a href="#top"><li>START</li></a>
+          <a href="#about"><li>O MNIE</li></a>
           <li>PROJEKTY</li>
           <li>KONTAKT</li>
         </ul>
       </nav>
       <div class="container">
-        <div class="about">
+        <div id="about" class="about">
           <p>O MNIE</p>
         </div>
+        <div id="about" class="about">
+          <p>PROJEKTY</p>
+        </div>
+        <div id="about" class="about">
+          <p>KONTAKT</p>
+        </div>
+        
       </div>
     </section>
+    <span class="up-button"></span>
   </body>
 </html>

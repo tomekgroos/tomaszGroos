@@ -1,14 +1,28 @@
-const testISO = document.querySelector(".about");
+const testISO = document.querySelectorAll(".about");
 
-
-
-
-const ISO = new IntersectionObserver((entry) =>{
-    if (entry[0].intersectionRatio > 0){
-        entry[0].target.style.animation = "fadeRight 1s ease-in";
+ISO = new IntersectionObserver((entry) => {
+  entry.forEach((el) => {
+    if (el.intersectionRatio > 0) {
+      el.target.style.animation = "fadeRight 1s ease-in";
     } else {
-        entry[0].target.style.animation = "none";
+      el.target.style.animation = "none";
     }
+  });
 });
 
-ISO.observe(testISO);
+testISO.forEach((box) => {
+  ISO.observe(box);
+});
+
+const upButton = document.querySelector(".up-button");
+
+const resetScreen = () => {
+  window.addEventListener("scroll", () => {
+    upButton.classList.toggle("active", window.scrollY > 500);
+  });
+
+  upButton.onclick = () => {
+    window.scrollTo(0, 0);
+  };
+};
+
