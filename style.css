@@ -9,6 +9,7 @@
 
 body {
   font-family: "Signika", sans-serif;
+  background-color: #070303ef;
 }
 
 header {
@@ -109,16 +110,32 @@ header {
   }
 }
 
-section {
-  width: 100%;
-  background-color: #070303ef;
-}
-
-section .container {
+.container {
   height: 1500px;
-  width: 80%;
   -webkit-transform: translate(12.5%);
           transform: translate(12.5%);
+}
+
+.about {
+  margin-top: 100px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30vw;
+  height: 30vh;
+  font-size: 3rem;
+  color: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .fader {
@@ -173,32 +190,6 @@ nav ul li:hover {
   color: #5c5151ef;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.about {
-  margin-top: 40vh;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 30vw;
-  height: 30vh;
-  font-size: 3rem;
-  color: white;
-  border: 1px solid white;
-  border-radius: 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#about {
-  position: relative;
 }
 
 .up-button {
