@@ -1,4 +1,4 @@
-const testISO = document.querySelectorAll(".about");
+const testISO = document.querySelectorAll("section");
 
 const observer = new IntersectionObserver ((entries) =>{
   entries.forEach((el) =>{

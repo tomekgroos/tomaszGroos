@@ -1,29 +1,33 @@
-const testISO = document.querySelectorAll(".about");
+const about = document.querySelector("#about");
+const projects = document.querySelector("#projects");
+const contact = document.querySelector("#contact");
+const moveRight = document.querySelectorAll(".moveRight");
 
 const options = {
   root: null,
   threshold: 0.3,
-  rootMargin: "150px"
+  rootMargin: "150px",
+};
 
-}
-
-const observer = new IntersectionObserver ((entries) =>{
-  entries.forEach((el) =>{
-    console.log(el);
-    if (el.intersectionRatio > 0){
-      el.target.style.animation = "fadeRight 1.5s ease-in";
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.intersectionRatio > 0) {
+      entry.target.style.animation = "fadeRight 1.5s ease-in";
       observer.unobserve(el.target);
-    } else if(el.isIntersecting === true){
+    } else if (entry.isIntersecting === true) {
       return;
     }
   });
- 
 }, options);
 
-testISO.forEach((box) =>{
-  observer.observe(box);
-})
+/* observer.observe(about);
+observer.observe(projects);
+observer.observe(contact);
+ */
 
+moveRight.forEach((el) => {
+  observer.observe(el);
+});
 
 const upButton = document.querySelector(".up-button");
 
@@ -36,4 +40,3 @@ const resetScreen = () => {
     window.scrollTo(0, 0);
   };
 };
-
