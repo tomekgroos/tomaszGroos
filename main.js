@@ -40,3 +40,15 @@ const resetScreen = () => {
     window.scrollTo(0, 0);
   };
 };
+
+
+
+const showNav = () => {
+  const mobileMenu = document.querySelector("nav");
+  const burger = document.querySelector(".burger");
+
+  burger.onclick = () => {
+    
+    mobileMenu.classList.toggle("nav-active");
+  }
+}
