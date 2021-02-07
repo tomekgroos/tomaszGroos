@@ -13,7 +13,7 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.intersectionRatio > 0) {
       entry.target.style.animation = "fadeRight 1.5s ease-in";
-      observer.unobserve(el.target);
+      observer.unobserve(entry.target);
     } else if (entry.isIntersecting === true) {
       return;
     }
@@ -27,6 +27,7 @@ observer.observe(contact);
 
 moveRight.forEach((el) => {
   observer.observe(el);
+  
 });
 
 const upButton = document.querySelector(".up-button");

@@ -318,7 +318,22 @@ nav{
         display: block;
         margin-right: 20px;
     }
- }
+ 
+    .title {
+        top: 45%;
+        left: 10%;
+    }
+
+    .junior {
+        top: 65%;
+        left: 10%;
+    }
+
+  
+}
+
+
+
 
 @keyframes fadeRight {
     from{
