@@ -10,6 +10,7 @@
 body {
   font-family: "Signika", sans-serif;
   background-color: #070303ef;
+  overflow-x: hidden;
 }
 
 header {
@@ -301,29 +302,37 @@ nav ul li:hover {
 
 @media screen and (max-width: 768px) {
   nav {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
     position: absolute;
     right: 0px;
     top: 0;
-    height: 80%;
-    width: 60%;
+    height: 88vh;
+    width: 100%;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-  }
-  nav ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    height: 60%;
-    margin-top: 50px;
+    background-color: #070303ef;
   }
   nav ul li {
+    margin-top: 50px;
     opacity: 0;
   }
   .nav-active {
@@ -332,7 +341,7 @@ nav ul li:hover {
   }
   .burger {
     display: block;
-    margin-right: 20px;
+    margin-right: 30px;
   }
   .title {
     top: 45%;
@@ -341,6 +350,9 @@ nav ul li:hover {
   .junior {
     top: 65%;
     left: 10%;
+  }
+  .downButton {
+    top: 55%;
   }
 }
 
@@ -389,5 +401,31 @@ nav ul li:hover {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes navFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(50px);
+            transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes navFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(50px);
+            transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
   }
 }

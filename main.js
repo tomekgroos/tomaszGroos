@@ -45,11 +45,20 @@ const resetScreen = () => {
 
 
 const showNav = () => {
-  const mobileMenu = document.querySelector("nav");
+  const mobileMenu = document.querySelector("ul");
   const burger = document.querySelector(".burger");
+  const navLinks = document.querySelectorAll("li");
+  console.log(navLinks);
 
-  burger.onclick = () => {
-    
-    mobileMenu.classList.toggle("nav-active");
-  }
+burger.addEventListener("click", () => {
+  mobileMenu.classList.toggle("nav-active");
+});
+
+  navLinks.forEach((link, index) => {
+    link.style.animation = `navFade 0.5s ease forwards ${index / 7 + 2}s`;
+    console.log(link);
+  });
 }
+
+resetScreen();
+showNav();
