@@ -1,385 +1,369 @@
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap");
 
-@mixin flex-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin zeroReset {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-@mixin absoluteHorizontalReset{
-    left:0;
-    right:0;
+@mixin absoluteHorizontalReset {
+  left: 0;
+  right: 0;
 }
 
-*{
-    box-sizing: border-box;
-    @include zeroReset;
-    scroll-behavior: smooth;
+* {
+  box-sizing: border-box;
+  @include zeroReset;
+  scroll-behavior: smooth;
 }
-
-
 
 $body-color: #070303ef;
 
-body{
-    font-family: "Signika", sans-serif;
-    background-color: $body-color;
-    overflow-x: hidden;
+body {
+  font-family: "Signika", sans-serif;
+  background-color: $body-color;
+  overflow-x: hidden;
 }
 
-header{
-    font-family: "Chelsea Market", cursive;   
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+header {
+  font-family: "Chelsea Market", cursive;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
-
-
 
 @mixin pulse {
-    @keyframes pulse{
-        from {
-            opacity: 1;
-        }
-    
-        to {
-            opacity: 0;
-        }
+  @keyframes pulse {
+    from {
+      opacity: 1;
     }
-    animation: pulse 1.5s infinite linear;
+
+    to {
+      opacity: 0;
+    }
+  }
+  animation: pulse 1.5s infinite linear;
 }
 
-@mixin headerElementPosition{
-    position: absolute;
-    width: 1520px;
+@mixin headerElementPosition {
+  position: absolute;
+  width: 1520px;
 }
 
-.bottom{
-   @include headerElementPosition;
-    z-index: 6;
-    bottom: -50px;
-    @include absoluteHorizontalReset;
+.bottom {
+  @include headerElementPosition;
+  z-index: 6;
+  bottom: -50px;
+  @include absoluteHorizontalReset;
 }
 
-.middle{
-    @include headerElementPosition;
-    bottom: -300px;
-    @include absoluteHorizontalReset;
-    z-index: 5;
-    
-    
+.middle {
+  @include headerElementPosition;
+  bottom: -300px;
+  @include absoluteHorizontalReset;
+  z-index: 5;
 }
 
-.mountains{
-    position: absolute;
-    width:1200px;
-    bottom: 20px;
-    z-index: 4;
-    right: 0;
+.mountains {
+  position: absolute;
+  width: 1200px;
+  bottom: 20px;
+  z-index: 4;
+  right: 0;
 }
 
-.sky{
-    @include headerElementPosition;
-    right: 0;
-    top: -40px;
-    z-index: 3;
-    @include absoluteHorizontalReset;
+.sky {
+  @include headerElementPosition;
+  right: 0;
+  top: -40px;
+  z-index: 3;
+  @include absoluteHorizontalReset;
 }
 
-.title{
-    position: absolute;
-    right: 130px;
-    top: 350px;
-    font-size: 3rem;
-    color: white;
-    font-weight: bold;
-    z-index: 30;
-    text-shadow: 2px 2px black;
+.title {
+  position: absolute;
+  right: 130px;
+  top: 350px;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  z-index: 30;
+  text-shadow: 2px 2px black;
 }
 
-.junior{
-    position: absolute;
-    font-size: 1rem;
-    top: 410px;
-    right: 250px;
-    color: white;
-    z-index: 30;
-    text-shadow: 2px 2px black;
+.junior {
+  position: absolute;
+  font-size: 1rem;
+  top: 410px;
+  right: 250px;
+  color: white;
+  z-index: 30;
+  text-shadow: 2px 2px black;
 }
 
+.downButton {
+  position: absolute;
+  background: url("img/down.png");
+  background-size: cover;
+  top: 65%;
+  left: 85%;
+  width: 50px;
+  height: 100px;
+  z-index: 45;
+  transform: scale(1.4);
+  @include pulse;
+}
 
+.container {
+  width: 100vw;
+  @include zeroReset;
+}
 
-.downButton{
-    position: absolute;
-    background: url("img/down.png");
+section {
+  @mixin dimensions {
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
     background-size: cover;
-    top: 65%;
-    left: 85%;
-    width: 50px;
-    height: 100px;
-    z-index: 45;
-    transform: scale(1.4);
-    @include pulse;
+    background-position: center;
+    border-bottom: 5px solid $body-color;
+  }
+
+  .about-box {
+    @include dimensions;
+    background-color: inherit;
+    background-image: url("img/socalobra.jpg");
+  }
+  .projects-box {
+    @include dimensions;
+    background-image: url("img/workstation.jpg");
+  }
+  .contact-box {
+    @include dimensions;
+  }
 }
 
-.container{
-    width: 100vw;
-    @include zeroReset;
+#about {
+  background-position: 100% 10%;
+  justify-content: space-between;
+
+  font-size: 3rem;
+  color: white;
+
+  @include flex-center;
 }
 
-section{
-    @mixin dimensions{
-        width: 100%;
-        height: 100vh;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-        border-bottom: 5px solid $body-color;
-        
-    }
+#projects {
+  justify-content: space-between;
 
-    .about-box{
-        @include dimensions;
-        background-color: inherit;
-        background-image: url("img/socalobra.jpg");
-        
-    }
-    .projects-box{
-        @include dimensions;
-        background-image: url("img/workstation.jpg");
-      
-        
+  font-size: 3rem;
+  color: white;
 
-    }
-    .contact-box{
-        @include dimensions;
-    }
-
+  @include flex-center;
 }
 
+#contact {
+  justify-content: space-between;
 
+  font-size: 3rem;
+  color: white;
 
-#about{
-    background-position: 100% 10%;
-    justify-content: space-between;
-   
-
-    
-    font-size: 3rem;
-    color: white;
-    
-    
-    @include flex-center;
+  @include flex-center;
 }
 
-#projects{
-   
-    justify-content: space-between;
-
-    
-    font-size: 3rem;
-    color: white;
-    
-   
-    @include flex-center;
+.fader {
+  position: absolute;
+  bottom: -20px;
+  width: 100%;
+  height: 350px;
+  background: linear-gradient(to bottom, transparent, $body-color);
+  z-index: 30;
 }
 
-#contact{
-    
-    justify-content: space-between;
+nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  color: white;
+  z-index: 40;
+  background: linear-gradient(to right, #060202, $body-color);
 
-    
-    font-size: 3rem;
-    color: white;
-    
-
-    @include flex-center;
-}
-
-.fader{
-    position: absolute;
-    bottom: -20px;
-    width: 100%;
-    height: 350px;
-    background: linear-gradient( to bottom,transparent, $body-color);
-    z-index: 30;
-}
-
-nav{
-    display:flex;
+  ul {
+    display: flex;
     justify-content: space-around;
-    width: 100%;
-    height: 10vh;
-    position: sticky;
-    top: 0;
-    color: white;
-    z-index: 40;
-    background: linear-gradient( to right,#060202, $body-color);
-    
-    ul{
-        display: flex;
-        justify-content: space-around;
-        width: 80%;
-        padding: 20px;
-        font-size: 1.5rem;
-        list-style-type: none;
-        border-bottom: 2px solid $body-color;
-        box-shadow: 2px 2px 1px #080404;
-        a{
-            text-decoration: none;
-            color: white;
-        }
-        li{
-            text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
-            font-weight: bold;
-            padding-left: 30px;
-            cursor: pointer;
-            &:hover {
-                color:  #5c5151ef;
-                transition: 0.3s;
-              }
-        }
+    width: 80%;
+    padding: 20px;
+    font-size: 1.5rem;
+    list-style-type: none;
+    border-bottom: 2px solid $body-color;
+    box-shadow: 2px 2px 1px #080404;
+    a {
+      text-decoration: none;
+      color: white;
     }
+    li {
+      text-shadow: 3px 3px 3px rgba(0, 0, 0, 1);
+      font-weight: bold;
+      padding-left: 30px;
+      cursor: pointer;
+      &:hover {
+        color: #5c5151ef;
+        transition: 0.3s;
+      }
+    }
+  }
 }
 
-.burger{
-    transform: translateY(5%);
-    display: none;
-    div{
-        margin: 10px;
-        width: 35px;
-        height: 2px;
-        background-color: white;
-        border-radius: 20px;
-    }
+.burger {
+  transform: translateY(15%);
+  display: none;
+  div {
+    margin: 10px;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    border-radius: 20px;
+    transition: 0.3s ease-in;
+  }
 }
-
 
 .up-button {
-    background: url("img/up.png");
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    top: 85%;
-    left: 90%;
-    background-size: cover;
-    border-radius: 50%;
-    opacity: 0;
-    cursor: pointer;
-    transition: 0.5s;
-    z-index: 99;
-  
-    &:hover {
-      background-color:  #443131ef;
-    }
+  background: url("img/up.png");
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  top: 85%;
+  left: 90%;
+  background-size: cover;
+  border-radius: 50%;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.5s;
+  z-index: 99;
+
+  &:hover {
+    background-color: #443131ef;
   }
+}
 
-  .up-button.active {
-    opacity: 1;
-    display: block;
-    animation: rotate360 1.5s;
-  }
+.up-button.active {
+  opacity: 1;
+  display: block;
+  animation: rotate360 1.5s;
+}
 
+.burger-transform{
 
- @media screen and (max-width: 768px){
-     nav{
-        justify-content: flex-end;
+    .layer-1{
+        transform: rotate(45deg);
       
-        ul{
-            justify-content: flex-start;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 50px;
-            position: absolute;
-            right: 0px;
-            top:0;
-            height: 88vh;
-            width: 100%;
-            transform: translateX(100%);
-            transition:transform 0.5s ease-in;
-            background-color: $body-color;
-           
-           
-            
-            li{
-                margin-top: 50px;
-                opacity: 0;
-            }
-        }
-
-    }   
-  
-
-    .nav-active{
-        transform:translateX(0%);
-    }
-
-    .burger{
-        display: block;
-        margin-right: 30px;
-    }
- 
-    .title {
-        top: 45%;
-        left: 10%;
-    }
-
-    .junior {
-        top: 65%;
-        left: 10%;
-    }
-
-    .downButton{
-        top: 55%;
-    }
-
-
-  
+      }
+      
+      .layer-2{
+         
+            transform: translate(-5px);
+            /* background-color: $body-color; */
+        
+      }
+      
+      .layer-3{
+          transform: rotate(-45deg);
+         
+      }
 }
 
 
 
 
-@keyframes fadeRight {
-    from{
+@media screen and (max-width: 768px) {
+  nav {
+    justify-content: flex-end;
+
+    ul {
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      position: absolute;
+      right: 0px;
+      top: 0;
+      height: 88vh;
+      width: 100%;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+      background-color: $body-color;
+
+      li {
+        margin-top: 50px;
         opacity: 0;
-        transform: translate(-100px);
+      }
     }
-    to{
-        opacity: 1;
-        transform: translate(0);
-    }
+  }
+
+  .nav-active {
+    transform: translateX(0%);
+  }
+
+  .burger {
+    display: block;
+    margin-right: 30px;
+  }
+
+  .title {
+    top: 45%;
+    left: 10%;
+  }
+
+  .junior {
+    top: 65%;
+    left: 10%;
+  }
+
+  .downButton {
+    top: 55%;
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
 }
 
 //animation for back to top button
 
 @keyframes rotate360 {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
   }
-
-  // animation for mobile menu
-
-  @keyframes navFade {
-      from {
-        opacity: 0;
-        transform: translate(50px);
-        
-      }
-      to{
-        opacity: 1;
-        transform: translate(0px);
-      }
+  to {
+    transform: rotate(360deg);
   }
+}
 
+// animation for mobile menu
 
+@keyframes navFade {
+  from {
+    opacity: 0;
+    transform: translate(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0px);
+  }
+}

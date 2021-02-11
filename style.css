@@ -260,8 +260,8 @@ nav ul li:hover {
 }
 
 .burger {
-  -webkit-transform: translateY(5%);
-          transform: translateY(5%);
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
   display: none;
 }
 
@@ -271,6 +271,8 @@ nav ul li:hover {
   height: 2px;
   background-color: white;
   border-radius: 20px;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .up-button {
@@ -298,6 +300,22 @@ nav ul li:hover {
   display: block;
   -webkit-animation: rotate360 1.5s;
           animation: rotate360 1.5s;
+}
+
+.burger-transform .layer-1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.burger-transform .layer-2 {
+  -webkit-transform: translate(-5px);
+          transform: translate(-5px);
+  /* background-color: $body-color; */
+}
+
+.burger-transform .layer-3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 @media screen and (max-width: 768px) {

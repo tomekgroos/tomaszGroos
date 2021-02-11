@@ -27,7 +27,6 @@ observer.observe(contact);
 
 moveRight.forEach((el) => {
   observer.observe(el);
-  
 });
 
 const upButton = document.querySelector(".up-button");
@@ -43,22 +42,31 @@ const resetScreen = () => {
 };
 
 
-
+// function for toggle mobile navigation
 const showNav = () => {
   const mobileMenu = document.querySelector("ul");
   const burger = document.querySelector(".burger");
   const navLinks = document.querySelectorAll("li");
-  console.log(navLinks);
 
-burger.addEventListener("click", () => {
-  mobileMenu.classList.toggle("nav-active");
-});
+  burger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("nav-active");
+    //if true animate each nav link
+    if (mobileMenu.classList.contains("nav-active")) {
+      // using index parameter for domino effect
+      navLinks.forEach((link, index) => {
+        link.style.animation = `navFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+        link.style.display = "block";
+      });
+    } else {
+      navLinks.forEach((link) => {
+        link.style.display = "none";
+      });
+    }
 
-  navLinks.forEach((link, index) => {
-    link.style.animation = `navFade 0.5s ease forwards ${index / 7 + 2}s`;
-    console.log(link);
+    burger.classList.toggle("burger-transform");
+
   });
-}
+};
 
 resetScreen();
 showNav();
