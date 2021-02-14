@@ -28,6 +28,7 @@ body {
   font-family: "Signika", sans-serif;
   background-color: $body-color;
   overflow-x: hidden;
+
 }
 
 header {
@@ -59,7 +60,7 @@ header {
 .bottom {
   @include headerElementPosition;
   z-index: 6;
-  bottom: -50px;
+  bottom: 0px;
   @include absoluteHorizontalReset;
 }
 
@@ -131,18 +132,17 @@ section {
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position: 100px 500px;
     border-bottom: 5px solid $body-color;
   }
 
   .about-box {
     @include dimensions;
-    background-color: inherit;
-    background-image: url("img/socalobra.jpg");
+    background: url("img/socalobra.jpg");
   }
   .projects-box {
     @include dimensions;
-    background-image: url("img/workstation.jpg");
+    background: url("img/workstation.jpg");
   }
   .contact-box {
     @include dimensions;
@@ -150,7 +150,7 @@ section {
 }
 
 #about {
-  background-position: 100% 10%;
+  
   justify-content: space-between;
 
   font-size: 3rem;
@@ -170,16 +170,14 @@ section {
 
 #contact {
   justify-content: space-between;
-
   font-size: 3rem;
   color: white;
-
   @include flex-center;
 }
 
 .fader {
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   width: 100%;
   height: 350px;
   background: linear-gradient(to bottom, transparent, $body-color);
@@ -285,9 +283,41 @@ nav {
 
 
 @media screen and (max-width: 768px) {
-  body{
+  html{
     touch-action: pan-y pinch-zoom;
+    font-size: 70%;
   }
+
+
+  .middle{
+    left: -430px;
+  }
+
+  .bottom{
+    bottom: -20px;
+  }
+
+  .mountains{
+    left: -150px;
+    top: 210px;
+  }
+
+  .sky{
+    top: 60px;
+  }
+
+  section{
+    .about-box{
+      background: url("img/socalobramob.jpg");
+      background-size: cover;
+      background-position: 90% 100%;
+    }
+
+    .projects-box{
+      background-position: 70% 50%;
+    }
+  }
+  
 
   .up-button{
     width: 50px;
@@ -332,22 +362,25 @@ nav {
   }
 
   .title {
-    top: 40%;
-    left: 10%;
+    width: 40%;
+    top: 50%;
+    left: 7%;
   }
 
   .junior {
-    top: 60%;
-    left: 10%;
+    top: 65%;
+    left: 7%;
   }
 
   .downButton {
-    top: 55%;
-    left: 75%;
+    top: 60%;
+    left: 45%;
   }
 }
 
-
+.fader{
+  height: 250px;
+}
 
 @keyframes fadeRight {
   from {

@@ -25,7 +25,7 @@ header {
   position: absolute;
   width: 1520px;
   z-index: 6;
-  bottom: -50px;
+  bottom: 0px;
   left: 0;
   right: 0;
 }
@@ -122,10 +122,9 @@ section .about-box {
   height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: 100px 500px;
   border-bottom: 5px solid #070303ef;
-  background-color: inherit;
-  background-image: url("img/socalobra.jpg");
+  background: url("img/socalobra.jpg");
 }
 
 section .projects-box {
@@ -133,9 +132,9 @@ section .projects-box {
   height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: 100px 500px;
   border-bottom: 5px solid #070303ef;
-  background-image: url("img/workstation.jpg");
+  background: url("img/workstation.jpg");
 }
 
 section .contact-box {
@@ -143,12 +142,11 @@ section .contact-box {
   height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: 100px 500px;
   border-bottom: 5px solid #070303ef;
 }
 
 #about {
-  background-position: 100% 10%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -201,7 +199,7 @@ section .contact-box {
 
 .fader {
   position: absolute;
-  bottom: -20px;
+  bottom: 0;
   width: 100%;
   height: 350px;
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#070303ef));
@@ -319,9 +317,31 @@ nav ul li:hover {
 }
 
 @media screen and (max-width: 768px) {
-  body {
+  html {
     -ms-touch-action: pan-y pinch-zoom;
         touch-action: pan-y pinch-zoom;
+    font-size: 70%;
+  }
+  .middle {
+    left: -430px;
+  }
+  .bottom {
+    bottom: -20px;
+  }
+  .mountains {
+    left: -150px;
+    top: 210px;
+  }
+  .sky {
+    top: 60px;
+  }
+  section .about-box {
+    background: url("img/socalobramob.jpg");
+    background-size: cover;
+    background-position: 90% 100%;
+  }
+  section .projects-box {
+    background-position: 70% 50%;
   }
   .up-button {
     width: 50px;
@@ -373,17 +393,22 @@ nav ul li:hover {
     margin-right: 30px;
   }
   .title {
-    top: 40%;
-    left: 10%;
+    width: 40%;
+    top: 50%;
+    left: 7%;
   }
   .junior {
-    top: 60%;
-    left: 10%;
+    top: 65%;
+    left: 7%;
   }
   .downButton {
-    top: 55%;
-    left: 75%;
+    top: 60%;
+    left: 45%;
   }
+}
+
+.fader {
+  height: 250px;
 }
 
 @-webkit-keyframes fadeRight {
