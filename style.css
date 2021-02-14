@@ -339,6 +339,7 @@ nav ul li:hover {
     background: url("img/socalobramob.jpg");
     background-size: cover;
     background-position: 90% 100%;
+    border-top: 5px solid #070303ef;
   }
   section .projects-box {
     background-position: 70% 50%;
@@ -406,7 +407,7 @@ nav ul li:hover {
     left: 45%;
   }
   .fader {
-    height: 100px;
+    display: none;
   }
 }
 

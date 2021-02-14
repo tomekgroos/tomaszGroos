@@ -311,6 +311,7 @@ nav {
       background: url("img/socalobramob.jpg");
       background-size: cover;
       background-position: 90% 100%;
+      border-top: 5px solid $body-color;
     }
 
     .projects-box{
@@ -378,7 +379,7 @@ nav {
   }
 
   .fader{
-    height: 100px;
+    display:none;
   }
 
 }
