@@ -177,11 +177,11 @@ section {
 
 .fader {
   position: absolute;
-  bottom: 0;
+  bottom:0;
   width: 100%;
-  height: 350px;
+  height: 150px;
   background: linear-gradient(to bottom, transparent, $body-color);
-  z-index: 30;
+  z-index: 70;
 }
 
 nav {
@@ -376,11 +376,14 @@ nav {
     top: 60%;
     left: 45%;
   }
+
+  .fader{
+    height: 100px;
+  }
+
 }
 
-.fader{
-  display: none;
-}
+
 
 @keyframes fadeRight {
   from {
