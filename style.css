@@ -408,7 +408,7 @@ nav ul li:hover {
 }
 
 .fader {
-  height: 250px;
+  height: 100px;
 }
 
 @-webkit-keyframes fadeRight {
