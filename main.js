@@ -56,6 +56,11 @@ const showNav = () => {
       navLinks.forEach((link, index) => {
         link.style.animation = `navFade 0.5s ease forwards ${index / 7 + 0.5}s`;
         link.style.display = "block";
+        // hide menu after click on link
+        link.addEventListener("click", () =>{
+          mobileMenu.classList.remove("nav-active");
+          burger.classList.remove("burger-transform");
+        })
       });
     } else {
       navLinks.forEach((link) => {
@@ -63,9 +68,10 @@ const showNav = () => {
       });
     }
 
-    burger.classList.toggle("burger-transform");
-
+    
+burger.classList.toggle("burger-transform");
   });
+
 };
 
 resetScreen();
