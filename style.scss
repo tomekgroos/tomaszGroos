@@ -132,17 +132,16 @@ section {
     height: 100vh;
     background-attachment: fixed;
     background-size: cover;
-    background-position: 100px 500px;
     border-bottom: 5px solid $body-color;
   }
 
   .about-box {
     @include dimensions;
-    background: url("img/socalobra.jpg");
+    background-image: url("img/socalobra.jpg");
   }
   .projects-box {
     @include dimensions;
-    background: url("img/workstation.jpg");
+    background-image: url("img/workstation.jpg");
   }
   .contact-box {
     @include dimensions;
@@ -236,8 +235,8 @@ nav {
 
 .up-button {
   background: url("img/up.png");
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   position: fixed;
   top: 85%;
   left: 90%;

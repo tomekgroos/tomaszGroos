@@ -122,9 +122,8 @@ section .about-box {
   height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 100px 500px;
   border-bottom: 5px solid #070303ef;
-  background: url("img/socalobra.jpg");
+  background-image: url("img/socalobra.jpg");
 }
 
 section .projects-box {
@@ -132,9 +131,8 @@ section .projects-box {
   height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 100px 500px;
   border-bottom: 5px solid #070303ef;
-  background: url("img/workstation.jpg");
+  background-image: url("img/workstation.jpg");
 }
 
 section .contact-box {
@@ -142,7 +140,6 @@ section .contact-box {
   height: 100vh;
   background-attachment: fixed;
   background-size: cover;
-  background-position: 100px 500px;
   border-bottom: 5px solid #070303ef;
 }
 
@@ -275,8 +272,8 @@ nav ul li:hover {
 
 .up-button {
   background: url("img/up.png");
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   position: fixed;
   top: 85%;
   left: 90%;
