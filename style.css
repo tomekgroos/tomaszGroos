@@ -72,7 +72,7 @@ header {
   position: absolute;
   font-size: 1rem;
   top: 410px;
-  right: 250px;
+  right: 20%;
   color: white;
   z-index: 30;
   text-shadow: 2px 2px black;
@@ -82,7 +82,7 @@ header {
   position: absolute;
   background: url("img/down.png");
   background-size: cover;
-  top: 60%;
+  top: 65%;
   left: 85%;
   width: 50px;
   height: 100px;
@@ -126,6 +126,12 @@ section .about-box {
   background-image: url("img/socalobra.jpg");
 }
 
+section .about-box p {
+  width: 100%;
+  color: white;
+  font-size: 1.5rem;
+}
+
 section .projects-box {
   width: 100%;
   height: 100vh;
@@ -141,23 +147,6 @@ section .contact-box {
   background-attachment: fixed;
   background-size: cover;
   border-bottom: 5px solid #070303ef;
-}
-
-#about {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 3rem;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #projects {
@@ -346,6 +335,11 @@ nav ul li:hover {
     top: 60px;
   }
   section .about-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     background: url("img/socalobramob.jpg");
     background-size: cover;
     background-position: 90% 100%;
