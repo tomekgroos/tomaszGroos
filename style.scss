@@ -136,39 +136,83 @@ section {
   }
 
   .about-box {
+    color:white;
+    
     @include dimensions;
     background-image: url("img/socalobra.jpg");
+   
     p{
-      width: 100%;
-      color:white;
+      width: 80%;
       font-size: 1.5rem;
+      text-align: center;
+    }
+    .about{
+      display: flex;
+      justify-content:center;
+      flex-wrap: wrap;
+      height: inherit;
+      :first-child{
+        margin-top: 30px;
+        font-size: 3rem;
+        text-decoration: solid;
+      }
     }
   }
-  .projects-box {
+
+
+  .projects-container {
     @include dimensions;
     background-image: url("img/workstation.jpg");
+    p{
+      display: flex;
+      justify-content: center;
+      color:white;
+      font-size: 3rem;
+      padding-top: 50px;
+      width: 100%;
+      
+    }
+    .projects-box{
+      a{
+        width: 100%;
+        height: 100%;
+       }
+      height: 80%;
+      display: grid;
+      color: white;
+      font-size: 4rem;
+      text-align: center;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 10px;
+    }
+    .singlebox{
+     
+      width: 70%;
+      height: 50%;
+      margin: 30px;
+      border: 1px solid white;
+    }
+    .one{
+     
+      img{
+        
+        width: 100%;
+        height: 100%;
+      }
+   
+    }
   }
-  .contact-box {
+
+
+
+  .contact-container {
     @include dimensions;
   }
 }
 
 
-#projects {
-  justify-content: space-between;
 
-  font-size: 3rem;
-  color: white;
 
-  @include flex-center;
-}
-
-#contact {
-  justify-content: space-between;
-  font-size: 3rem;
-  color: white;
-  @include flex-center;
-}
 
 .fader {
   position: absolute;
@@ -275,6 +319,7 @@ nav {
 }
 
 @media screen and (min-width: 1600px) {
+ 
     .mountains{
       right: 1480px;
     }
@@ -288,8 +333,16 @@ nav {
     }
 }
 
+@media screen and (min-width: 1300px){
+ html{
+   font-size: 95%;
+   }
+
+ 
+}
 
 @media screen and (max-width: 768px) {
+ 
   html{
     touch-action: pan-y pinch-zoom;
     font-size: 70%;
@@ -321,10 +374,10 @@ nav {
       background-size: cover;
       background-position: 90% 100%;
       border-top: 5px solid $body-color;
-
+      
     }
- 
-    .projects-box{
+
+    .projects-container{
       background-position: 70% 50%;
     }
   }
