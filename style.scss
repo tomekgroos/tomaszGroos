@@ -498,12 +498,18 @@ nav {
     display:none;
   }
 
-  section .contact-container .contact-box {
-    display: grid;
-    grid-template-columns: 1; 
-      transform:translateX(45%);
+  section .contact-container  {
+    .contact-box{
+      display: grid;
+    grid-template-columns: 4;
+    grid-template-rows: 3; 
+     height: 100%;
+   
+    }
+    
     .img-contact-box{
-        margin: 0;
+        transform: translateX(330%);
+    
       img{
         transform: scale(2.4);
       }
