@@ -504,6 +504,21 @@ nav ul li:hover {
   .fader {
     display: none;
   }
+  section .contact-container .contact-box {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1;
+        grid-template-columns: 1;
+    -webkit-transform: translateX(45%);
+            transform: translateX(45%);
+  }
+  section .contact-container .contact-box .img-contact-box {
+    margin: 0;
+  }
+  section .contact-container .contact-box .img-contact-box img {
+    -webkit-transform: scale(2.4);
+            transform: scale(2.4);
+  }
 }
 
 @-webkit-keyframes fadeRight {
