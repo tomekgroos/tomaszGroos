@@ -393,8 +393,12 @@ nav ul li:hover {
   html {
     font-size: 95%;
   }
+  section .projects-container {
+    height: 100%;
+  }
   section .projects-container .projects-box {
     width: 100%;
+    height: 100%;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -ms-grid-rows: (1fr)[3];
