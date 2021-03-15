@@ -20,10 +20,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, options);
 
-/* observer.observe(about);
-observer.observe(projects);
-observer.observe(contact);
- */
 
 moveRight.forEach((el) => {
   observer.observe(el);
